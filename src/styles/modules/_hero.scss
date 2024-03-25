@@ -1,0 +1,59 @@
+.hero-container {
+    @include contained-button;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:48px;
+    height: 100vh;
+
+    video {
+        position: absolute;
+        top: 0px;
+        left:0;
+        object-fit: cover;
+        z-index: -2;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .content {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        max-width: 1290px;
+        width: 100%;
+        text-align: left;
+
+        @media screen and (max-width: $b-tablet) {
+            align-items: center;
+        }
+    }
+
+    img{
+        height: 256px;
+        width: 256px;
+        @media screen and (max-width: $b-mobile) {
+            height: 128px;
+            width: 128px;
+        }
+    }
+    h1 {
+        color:$c-fever-blue-dark;
+        font-size: 48px;
+        margin: 48px 0px 16px 0px;
+        @media screen and (max-width: $b-tablet) {
+            text-align: center;
+            margin: 16px 0px;
+        }
+    }
+    h2 {
+        color:$c-fever-blue-dark;
+        margin-bottom: 48px;
+    }
+}

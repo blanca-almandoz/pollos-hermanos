@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Los Pollos Hermanos</title>
+  </head>
+  <body>
+
+  <section class="navbar-container">
+    <header class="navbar">
+      <img src="src/assets/images/header/lph-logo.png" />
+      <div class="navbar-components">
+        <button>Order now</button>
+        <!-- TO-DO: extract the menu code in a separate file-->
+        <ul>
+          <li><a href="#info">INFO</a></li>
+          <li><a href="#menu">MENU</a></li>
+          <li><a href="#location">LOCATION</a></li>
+        </ul>
+      </div>
+    </header>
+  </section>
+
+  <section class="hero-container" id="info">
+    <video autoplay muted loop id="heroVideo">
+      <source src="src/assets/videos/hero-video.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="content">
+      <img src="src/assets/images/header/lph-logo.png" />
+      <h1>Order fried chicken now</h1>
+      <h2>Get famous chicken however you want it.</h2>
+      <button>Order now</button>
+    </div>
+  </section>
+  
+  <section class="menu-container" id="menu">
+    <div>
+      <h2>Menu</h2>
+      <p>Menu varies by location. Please contact your local restaurant to verify menu availability.</p>
+    </div>
+        <div class="menus-container">
+          <div class="content" id="content"> 
+            <div id="menu-card" />
+          </div>
+        </div>
+        <div class="calculator-container">
+          <div class="calculator">
+            <div class="calculator-title">
+              <h3>No tricks here!</h3>
+              <p> Calculate how much your food is going to cost you.</p>
+            </div>
+
+            <!-- TO-DO: make options render dynamically -->
+            <div class="calculator-options"> 
+              <div class="calculator-option">
+                <p>Fried chicken</p>
+                <div class="calculator-option-actions">
+                  <button type="button" onclick="decrement('0')">-</button>
+                  <div id="0">0</div>
+                  <button type="button" onclick="increment('0')">+</button>
+                </div>
+              </div>
+              
+              <div class="calculator-option">
+                <p>French fries</p>
+                <div class="calculator-option-actions">
+                  <button type="button" onclick="decrement('1')">-</button>
+                  <div id="1">0</div>
+                  <button type="button" onclick="increment('1')">+</button>
+                </div>
+              </div>
+
+              <div class="calculator-option">
+                <p>Milkshake</p>
+                <div class="calculator-option-actions">
+                  <button type="button" onclick="decrement('2')">-</button>
+                  <div id="2">0</div>
+                  <button type="button" onclick="increment('2')">+</button>
+                </div>
+              </div>
+
+              <div class="calculator-option">
+                <p>Chicken burger</p>
+                <div class="calculator-option-actions">
+                  <button type="button" onclick="decrement('3')">-</button>
+                  <div id="3">0</div>
+                  <button type="button" onclick="increment('3')">+</button>
+                </div>
+              </div>
+
+              <div class="calculator-option">
+                <p>Beer</p>
+                <div class="calculator-option-actions">
+                  <button type="button" onclick="decrement('4')">-</button>
+                  <div id="4">0</div>
+                  <button type="button" onclick="increment('4')">+</button>
+                </div>
+              </div>
+
+              <div class="calculator-option">
+                <p>Chicken wings</p>
+                <div class="calculator-option-actions">
+                  <button type="button" onclick="decrement('5')">-</button>
+                  <div id="5">0</div>
+                  <button type="button" onclick="increment('5')">+</button>
+                </div>
+              </div>
+
+            </div>
+            <div class="calculator-button" onclick="calculatePrice()"><button>Calculate</button></div>
+            <div class="calculator-result" id="calculator-result">
+              <p id="calculator-error" class="calculator-error" />
+            </div>
+          </div>
+      </div>
+  </section>
+
+  <section class="location-container" id="location">
+    <div class="location-content">
+      <div class="location-text">
+        <h2>New Los Pollos Hermanos restaurant in Madrid!</h2>
+        <p>The first establishment in Spain to incorporate the new company image. The restaurants sporting the new image have been warmly welcomed by the public, with growth above 30% in those premises with the new Los Pollos Hermanos.
+          <br><br>
+          Los Pollos Hermanos, flagship brand of Eat Out restoration group, announced the opening its first restaurant in Madrid, at <strong>Puerta de Alcalá.</strong></p>
+        <a href="https://www.google.es/maps/place/C.+de+Valenzuela,+4,+Retiro,+28014+Madrid/@40.4189232,-3.6916949,17z/data=!3m1!4b1!4m6!3m5!1s0xd42289b8d392581:0x32bfed1206105c2b!8m2!3d40.4189232!4d-3.68912!16s%2Fg%2F11c5db8t6r?entry=ttu" target="_blank">
+          <button>Get directions</button>
+        </a> 
+      </div>
+      <img class="location-image" src="src/assets/images/location/location-img.jpg" />
+    </div>
+    <div id="map" class="map"/>
+  </section>
+
+  <section class="partners-container">
+      <h3>Event by</h3>
+      <img class="lph-logo" src="src/assets/images/header/lph-logo.png" />
+      <h3>in partnership with</h3>
+      <img class="fever-logo" src="src/assets/images/general/fever-logo.svg" />
+  </section>
+
+  <section class="footer-container" style="background-image:url(src/assets/images/footer/footer-bg.jpg)">
+    <div class="container">
+      <div class="footer-menu">
+        <img class="lph-logo" src="src/assets/images/header/lph-logo.png" />
+        <div>
+          <!-- TO-DO: extract the menu code in a separate file-->
+          <ul>
+          <li><a href="#info">INFO</a></li>
+          <li><a href="#menu">MENU</a></li>
+          <li><a href="#location">LOCATION</a></li>
+        </ul>
+      </div>
+      </div>
+      <div class="footer-copyright">
+        <p>Los Pollos Hermanos is an original license. <a href="#">Privacy Policy</a></p>
+        <p>© 2022 LPH / Los pollos hermanos. All Rights Reserved.</p>
+      </div>
+    </div>
+  </section>
+
+    <!-- Do not edit below this line -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

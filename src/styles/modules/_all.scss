@@ -1,0 +1,38 @@
+@import 'header';
+@import 'hero';
+@import 'menu';
+@import 'location';
+@import 'partners';
+@import 'footer';
+
+body {
+    margin: 0;
+    font-family: $f-montserrat;
+}
+h2 {
+    color: $c-fever-blue-light;
+    font-size: 32px;
+    @media screen and (max-width: $b-tablet) {
+        text-align: center;
+        margin-bottom: 16px;
+    }
+}
+h3 {
+    font-weight: 700;
+    font-size: 24px;
+    color: $c-fever-blue-light;
+}
+h6 {
+    font-weight: 700;
+    font-size: 16px;
+    color: $c-fever-blue-dark;
+    margin: 0;
+}
+p {
+    font-family: $f-roboto;
+    font-size: 16px;
+    font-weight: 400;
+    color: $c-fever-blue-light;
+    margin: 0;
+}
+

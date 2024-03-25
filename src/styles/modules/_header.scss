@@ -1,0 +1,37 @@
+.navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $c-fever-blue-light;
+    width: 100%;
+    height: 64px;
+}
+
+.navbar-components {
+    display: flex;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1290px;
+
+    @include navigation-items;
+    @include contained-button;
+
+    ul {
+        @media screen and (max-width: $b-mobile) {
+            display:none
+        }
+    }
+   
+    img {
+        width: 48px;
+        height: 48px;
+    }
+}

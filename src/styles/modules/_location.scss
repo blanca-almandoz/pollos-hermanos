@@ -1,0 +1,55 @@
+.location-container {
+    padding-top: 81px;
+
+    .location-content {
+        @include container;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 48px;
+
+        @media screen and (max-width: $b-tablet) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .location-text {
+        @include contained-button;
+
+        @media screen and (max-width: $b-tablet) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 48px;
+            text-align: center;
+        }
+    }
+    .location-image {
+        height: 480px;
+        width: 480px;
+        border-radius: 50%;
+        object-fit: cover;
+        
+        @media screen and (max-width: $b-desktop) {
+            height: 300px;
+            width: 300px;
+        }
+    }
+    .map {
+        height: 400px;
+        width: 100%;
+    }
+
+    p {
+        margin: 16px 0px 48px 0px;
+    }
+
+    @media screen and (max-width: $b-desktop) {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+}

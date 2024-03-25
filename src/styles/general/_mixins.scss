@@ -1,0 +1,62 @@
+@mixin navigation-items{
+    a {
+        color:$c-fever-yellow;
+        font-weight: 700;
+        text-decoration: none;
+    }
+    a:hover {
+        color:$c-fever-orange;
+    }
+    ul {
+        display: flex;
+        align-items: center;
+    }
+    li {
+        margin-right: 48px;
+        list-style-type: none;
+    }
+}
+
+@mixin button {
+    button{
+        width: 152px;
+        height: 48px;
+        border-radius: 24px;
+        border: none;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 16px;
+    }
+}
+
+@mixin contained-button {
+    @include button;
+    button{
+        background-color: $c-fever-yellow;
+        color: $c-fever-blue-dark;
+    }
+    button:hover {
+        background-color: rgb(225, 219, 0, 0.9);
+    }
+}
+
+@mixin outlined-button {
+    @include button;
+    button{
+        border: solid;
+        color: $c-fever-blue-dark;
+        background-color: $c-white
+    }
+    button:hover {
+        background-color: rgb(71, 156,213, 0.3);
+    }
+}
+
+@mixin container {
+    width: 1290px;
+    margin: 0 auto;
+
+    @media screen and (max-width: $b-desktop) {
+        width: 100%;
+    }
+}

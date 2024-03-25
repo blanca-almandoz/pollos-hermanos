@@ -1,0 +1,25 @@
+.partners-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $c-fever-yellow;
+    font-size: 24px;
+    padding: 8px;
+    height: 225px;
+    gap: 16px;
+
+    h3 {
+        color: $c-fever-blue-dark;
+    }
+    
+    .lph-logo {
+        height: 81px;
+        width: 81px;
+    }
+
+    @media screen and (max-width: $b-mobile) {
+        flex-direction: column;
+        height: 100%;
+        padding-bottom: 32px;
+    }
+}
